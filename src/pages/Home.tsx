@@ -306,7 +306,7 @@ const Home: React.FC = () => {
 
       {/* Point of Difference Section */}
       <section className="py-20 bg-gradient-to-r from-primary-50 to-accent-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-ful mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Left: Video/Image */}
             <motion.div
@@ -317,7 +317,7 @@ const Home: React.FC = () => {
             >
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <video
-                  className="w-full h-[250px] md:h-[350px] lg:h-[430px] object-cover"
+                  className="w-full h-[250px] md:h-[350px] lg:h-[500px] object-cover"
                   src="/banner_video_2.mp4"
                   autoPlay
                   loop
