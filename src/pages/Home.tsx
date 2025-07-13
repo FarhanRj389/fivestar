@@ -128,11 +128,11 @@ const Home: React.FC = () => {
       exit={{ opacity: 0 }}
     >
       {/* Hero Section with Fixed Background */}
-      <section className="relative min-h-[700px] lg:min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-full lg:h-[108vh] flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <video
-          className="absolute z-1 inset-0 w-full h-full object-cover"
-          src="/banner_video_2.mp4"
+          className="absolute z-1 inset-0 w-full h-full object-fill"
+          src="/banner_4.mp4"
           autoPlay
           loop
           muted
@@ -269,16 +269,15 @@ const Home: React.FC = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mb-6"></div>
               </div>
               
-              <div className="space-y-4 text-lg text-secondary-600 leading-relaxed">
+              <div className="space-y-4 text-base text-secondary-600 leading-relaxed">
                 <p>
-                  Founded in 2020, Five Star Rentals emerged from a simple observation: Auckland's property management industry needed a fresh approach that truly prioritized both landlords and tenants.
-                </p>
+                  Founded in 2020, Five Star Rentals was created to deliver a no-nonsense, proactive approach to property management in Auckland one that truly supports both landlords and their tenants.
+ </p>
                 <p>
-                  Our experienced team combines deep market knowledge with innovative technology to deliver exceptional property management services. We don't just collect rent – we build relationships, maintain properties, and create lasting value for everyone involved.
-                </p>
+                 With over 10 years of hands-on experience in the Auckland property market, I've seen firsthand what works and what doesn't. In my previous role, I solely managed a portfolio of over 180 properties before stepping into a leadership position, overseeing a team of four property managers responsible for more than 380 properties. This experience shaped my belief that property management should be personal, transparent, and results-driven.
+</p>
                 <p>
-                  Today, we proudly manage over 500 properties across Auckland, maintaining a 98% client satisfaction rate and a reputation for excellence that speaks for itself.
-                </p>
+               Today, Five Star Rentals is proudly managing just under 100 quality properties across Auckland. We're continuing to grow organically working with like-minded, caring landlords who value honest service and long-term results. Our portfolio growth is now approaching 100 properties, a reflection of our reputation and the trust we've built in the market </p>
               </div>
 
               <div className="grid grid-cols-2 gap-6 pt-6">
