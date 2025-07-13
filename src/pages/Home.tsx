@@ -157,8 +157,7 @@ const Home: React.FC = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-secondary-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Auckland's premier property management company delivering exceptional results for landlords and tenants across the region.
-            </p>
+             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -302,6 +301,66 @@ const Home: React.FC = () => {
               </Link>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Point of Difference Section */}
+      <section className="py-20 bg-gradient-to-r from-primary-50 to-accent-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
+              A Point of Difference That Sets Us Apart
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto mb-8"></div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-primary-100">
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
+                  We're Here for Both Landlords and Tenants
+                </h3>
+              </div>
+              
+              <div className="prose prose-lg mx-auto text-secondary-700 leading-relaxed">
+                <p className="text-lg md:text-xl mb-6">
+                  We're not just here for landlords, we're here for tenants too. Unlike many agencies, we actively assist tenants in finding quality rental properties, which means we always have a ready pool of prospective tenants searching year-round.
+                </p>
+                
+                <p className="text-lg md:text-xl mb-6">
+                  From local movers to international arrivals, tenants regularly engage us often through partnerships with offshore property managers and recruitment agencies. This unique approach ensures faster occupancy, less vacancy, and better outcomes for everyone involved.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-secondary-200">
+                <div className="text-center p-4 bg-gradient-to-r from-primary-50 to-primary-100 rounded-xl">
+                  <div className="text-2xl font-bold text-primary-600 mb-2">Faster</div>
+                  <div className="text-sm text-secondary-600">Occupancy</div>
+                </div>
+                <div className="text-center p-4 bg-gradient-to-r from-accent-50 to-accent-100 rounded-xl">
+                  <div className="text-2xl font-bold text-accent-600 mb-2">Less</div>
+                  <div className="text-sm text-secondary-600">Vacancy</div>
+                </div>
+                <div className="text-center p-4 bg-gradient-to-r from-secondary-50 to-secondary-100 rounded-xl">
+                  <div className="text-2xl font-bold text-secondary-600 mb-2">Better</div>
+                  <div className="text-sm text-secondary-600">Outcomes</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
