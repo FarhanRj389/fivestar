@@ -31,7 +31,7 @@ const Header: React.FC = () => {
               <span>admin@fivestarrentals.co.nz</span>
             </div>
           </div>
-          <div className="text-primary-400">
+          <div className="text-[#F6D03F]">
             Auckland's Premier Property Management
           </div>
         </div>
@@ -63,14 +63,14 @@ const Header: React.FC = () => {
                   to={item.path}
                   className={`relative font-medium transition-colors duration-200 ${
                     location.pathname === item.path
-                      ? 'text-primary-500'
-                      : 'text-black hover:text-primary-500'
+                      ? 'text-yellow-500'
+                      : 'text-black hover:text-yellow-500 '
                   }`}
                 >
                   {item.name}
                   {location.pathname === item.path && (
                     <motion.div
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary-500"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-500"
                       layoutId="activeTab"
                     />
                   )}
@@ -82,7 +82,7 @@ const Header: React.FC = () => {
             <div className="hidden md:block">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-6 py-3 rounded-full font-semibold hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="bg-gradient-to-r from-[#F6D03F] to-accent-500 text-black px-6 py-3 rounded-full font-semibold hover:from-[#F6D03F] hover:to-yellow-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Free Appraisal
               </Link>
@@ -115,8 +115,8 @@ const Header: React.FC = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className={`block py-2 font-medium transition-colors ${
                       location.pathname === item.path
-                        ? 'text-primary-500'
-                        : 'text-black hover:text-primary-500'
+                        ? 'text-[#F6D03F]'
+                        : 'text-black hover:[text-yellow-500]'
                     }`}
                   >
                     {item.name}
@@ -125,7 +125,7 @@ const Header: React.FC = () => {
                 <Link
                   to="/contact"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block w-full text-center bg-gradient-to-r from-primary-500 to-accent-500 text-white px-6 py-3 rounded-full font-semibold mt-4"
+                  className="block w-full text-center bg-gradient-to-r from-[#F6D03F] to-accent-500 text-white px-6 py-3 rounded-full font-semibold mt-4"
                 >
                   Free Appraisal
                 </Link>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion} from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Shield, 
@@ -22,10 +22,8 @@ import {
 
 const Home: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
-  const { scrollY } = useScroll();
-  // Parallax effect for hero background
-  const heroY = useTransform(scrollY, [0, 500], [0, 150]);
-
+  
+  
   const features = [
     {
       icon: Shield,
@@ -151,7 +149,7 @@ const Home: React.FC = () => {
           >
             <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               We don't just manage properties,
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F6D03F] to-accent-500">
                 we craft future landlords
               </span>
             </h1>
@@ -162,7 +160,7 @@ const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-primary-500 to-accent-500 text-white lg:px-8 lg:py-4 px-4 py-2 rounded-full font-semibold lg:text-lg text-base hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center space-x-2"
+                className="bg-gradient-to-r from-[#F6D03F] to-accent-500 text-black lg:px-8 lg:py-4 px-4 py-2 rounded-full font-semibold lg:text-lg text-base hover:from-[#F6D03F] hover:to-[#F6D03F] transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center space-x-2"
               >
                 <span>Get Free Appraisal</span>
                 <ArrowRight className="w-5 h-5" />
@@ -201,7 +199,7 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">
+        <div className="text-4xl md:text-5xl font-bold text-[#F6D03F] mb-2">
                   {stat.number}
                 </div>
                 <div className="text-secondary-600 font-medium">
@@ -249,7 +247,7 @@ const Home: React.FC = () => {
                 className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl"
               >
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600 mb-1">15+</div>
+                  <div className="text-3xl font-bold text-[#F6D03F] mb-1">15+</div>
                   <div className="text-sm text-secondary-600">Years of Excellence</div>
                 </div>
               </motion.div>
@@ -265,7 +263,7 @@ const Home: React.FC = () => {
                 <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
                   About Five Star Rentals
                 </h2>
-                <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mb-6"></div>
+                <div className="w-20 h-1 bg-gradient-to-r from-[#F6D03F] to-accent-500 mb-6"></div>
               </div>
               
               <div className="space-y-4 text-base text-secondary-600 leading-relaxed">
@@ -281,12 +279,12 @@ const Home: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-6 pt-6">
                 <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                  <Building className="w-8 h-8 text-primary-600 mx-auto mb-2" />
+                  <Building className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-secondary-900">500+</div>
                   <div className="text-sm text-secondary-600">Properties Managed</div>
                 </div>
                 <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                  <Award className="w-8 h-8 text-primary-600 mx-auto mb-2" />
+                  <Award className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-secondary-900">98%</div>
                   <div className="text-sm text-secondary-600">Satisfaction Rate</div>
                 </div>
@@ -294,7 +292,7 @@ const Home: React.FC = () => {
 
               <Link
                 to="/about"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-500 to-accent-500 text-white px-6 py-3 rounded-full font-semibold hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#F6D03F] to-accent-500 text-black px-6 py-3 rounded-full font-semibold hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 <span>Learn More About Us</span>
                 <ArrowRight className="w-5 h-5" />
@@ -339,7 +337,7 @@ const Home: React.FC = () => {
                 <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
                   A Point of Difference That Sets Us Apart
                 </h2>
-                <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mb-6"></div>
+                <div className="w-20 h-1 bg-gradient-to-r from-[#F6D03F] to-accent-500 mb-6"></div>
               </div>
               <div className="space-y-4 text-base text-secondary-700 leading-relaxed">
                 <p className="text-lg md:text-xl">
@@ -351,11 +349,11 @@ const Home: React.FC = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
                 <div className="text-center p-4 bg-gradient-to-r from-primary-50 to-primary-100 rounded-xl">
-                  <div className="text-2xl font-bold text-primary-600 mb-2">Faster</div>
+                  <div className="text-2xl font-bold text-yellow-500 mb-2">Faster</div>
                   <div className="text-sm text-secondary-600">Occupancy</div>
                 </div>
                 <div className="text-center p-4 bg-gradient-to-r from-accent-50 to-accent-100 rounded-xl">
-                  <div className="text-2xl font-bold text-accent-600 mb-2">Less</div>
+                  <div className="text-2xl font-bold text-yellow-500 mb-2">Less</div>
                   <div className="text-sm text-secondary-600">Vacancy</div>
                 </div>
                 <div className="text-center p-4 bg-gradient-to-r from-secondary-50 to-secondary-100 rounded-xl">
@@ -394,7 +392,7 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-secondary-50 p-8 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#F6D03F] to-accent-500 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-secondary-900 mb-4">
@@ -436,7 +434,7 @@ const Home: React.FC = () => {
                 className="bg-white p-8 rounded-2xl hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-primary-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-yellow-500 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-semibold text-secondary-900 mb-3">
                       {reason.title}
@@ -473,7 +471,7 @@ const Home: React.FC = () => {
             {/* Landlord FAQs */}
             <div>
               <h3 className="text-2xl font-bold text-secondary-900 mb-8 flex items-center">
-                <HomeIcon className="w-6 h-6 text-primary-600 mr-3" />
+                <HomeIcon className="w-6 h-6 text-yellow-500 mr-3" />
                 For Landlords
               </h3>
               <div className="space-y-4">
@@ -491,9 +489,9 @@ const Home: React.FC = () => {
                     >
                       <span className="font-semibold text-secondary-900">{faq.question}</span>
                       {openFAQ === index ? (
-                        <Minus className="w-5 h-5 text-primary-600" />
+                        <Minus className="w-5 h-5 text-yellow-500" />
                       ) : (
-                        <Plus className="w-5 h-5 text-primary-600" />
+                        <Plus className="w-5 h-5 text-yellow-500" />
                       )}
                     </button>
                     {openFAQ === index && (
@@ -509,7 +507,7 @@ const Home: React.FC = () => {
             {/* Tenant FAQs */}
             <div>
               <h3 className="text-2xl font-bold text-secondary-900 mb-8 flex items-center">
-                <Users className="w-6 h-6 text-primary-600 mr-3" />
+                <Users className="w-6 h-6 text-yellow-500 mr-3" />
                 For Tenants
               </h3>
               <div className="space-y-4">
@@ -527,9 +525,9 @@ const Home: React.FC = () => {
                     >
                       <span className="font-semibold text-secondary-900">{faq.question}</span>
                       {openFAQ === (index + 10) ? (
-                        <Minus className="w-5 h-5 text-primary-600" />
+                        <Minus className="w-5 h-5 text-yellow-500" />
                       ) : (
-                        <Plus className="w-5 h-5 text-primary-600" />
+                        <Plus className="w-5 h-5 text-yellow-500" />
                       )}
                     </button>
                     {openFAQ === (index + 10) && (
@@ -566,21 +564,21 @@ const Home: React.FC = () => {
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-6 h-6 text-primary-400" />
+                  <MapPin className="w-6 h-6 text-[#F6D03F]" />
                   <div>
                     <div className="font-semibold">123 Queen Street</div>
                     <div className="text-secondary-300">Auckland CBD, 1010</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-6 h-6 text-primary-400" />
+                  <Phone className="w-6 h-6 text-[#F6D03F]" />
                   <div>
                     <div className="font-semibold">+64 20 457 4963</div>
                     <div className="text-secondary-300">24/7 Emergency Support</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-6 h-6 text-primary-400" />
+                  <Mail className="w-6 h-6 text-[#F6D03F]" />
                   <div>
                     <div className="font-semibold">admin@fivestarrentals.co.nz</div>
                     <div className="text-secondary-300">General Inquiries</div>
@@ -591,7 +589,7 @@ const Home: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
+                  className="bg-gradient-to-r from-[#F6D03F] to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-[#F6D03F] hover:to-yellow-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
                 >
                   <span>Get Your Free Appraisal</span>
                   <ArrowRight className="w-5 h-5" />
