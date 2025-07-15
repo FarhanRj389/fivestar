@@ -26,6 +26,7 @@ import {
  
   UserCheck,
   Bed,
+  Check,
  
 } from 'lucide-react';
 
@@ -37,14 +38,14 @@ const Tenants: React.FC = () => {
     {
       title: "Looking for a 2-Bedroom to Rent?",
       description: "Click here to explore available 2-bedroom properties!",
-      icon: Bed,
+      icon: Check,
       btn: "2-Bedroom",
       link: "https://www.renti.co/listing/2-beddy-street-auckland-auckland-2019"
     },
     {
       title: "Need a 3-Bedroom Rental?",
       description: "Browse our current listings by clicking here.",
-      icon: Bed,
+      icon: Check,
        btn: "3-Bedroom",
        link: "https://www.renti.co/listing/3-beddy-street-auckland-auckland-2019"
     },

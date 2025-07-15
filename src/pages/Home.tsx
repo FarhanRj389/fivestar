@@ -128,7 +128,7 @@ const Home: React.FC = () => {
       exit={{ opacity: 0 }}
     >
       {/* Hero Section with Fixed Background */}
-      <section className="relative h-full lg:h-[108vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] lg:h-[108vh] flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <video
           className="absolute z-1 inset-0 w-full h-full object-fill"
@@ -149,7 +149,7 @@ const Home: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               We don't just manage properties,
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">
                 we craft future landlords
@@ -162,7 +162,7 @@ const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center space-x-2"
+                className="bg-gradient-to-r from-primary-500 to-accent-500 text-white lg:px-8 lg:py-4 px-4 py-2 rounded-full font-semibold lg:text-lg text-base hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center space-x-2"
               >
                 <span>Get Free Appraisal</span>
                 <ArrowRight className="w-5 h-5" />
@@ -170,7 +170,7 @@ const Home: React.FC = () => {
               
               <Link
                 to="/landlords"
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-secondary-900 transition-all duration-200 flex items-center space-x-2"
+                className="border-2 border-white text-white lg:px-8 lg:py-4 px-4 py-2 rounded-full font-semibold lg:text-lg text-base hover:bg-white hover:text-secondary-900 transition-all duration-200 flex items-center space-x-2"
               >
                 <span>Learn More</span>
                 <ArrowRight className="w-5 h-5 " />
