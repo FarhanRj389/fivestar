@@ -1,12 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Award, 
-  Users,  
   Shield,
   Star,
-  CheckCircle,
-  Target,
   Heart,
   Lightbulb
 } from 'lucide-react';
@@ -63,28 +59,7 @@ const About: React.FC = () => {
     }
   ];
 
-  const team = [
-    {
-      name: "Sarah Johnson",
-      role: "Managing Director",
-      description: "15+ years in Auckland property market with expertise in investment strategy and portfolio management."
-    },
-    {
-      name: "Michael Chen",
-      role: "Operations Manager",
-      description: "Specialist in property maintenance and tenant relations with a focus on customer satisfaction."
-    },
-    {
-      name: "Emma Williams",
-      role: "Senior Property Manager",
-      description: "Expert in tenancy law and compliance with a track record of successful property management."
-    },
-    {
-      name: "David Thompson",
-      role: "Business Development",
-      description: "Focused on building relationships with landlords and expanding our property portfolio."
-    }
-  ];
+  
 
   return (
     <motion.div
@@ -280,10 +255,8 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-secondary-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+      <section className="py-20 bg-white">
+        <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -292,90 +265,54 @@ const About: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
               Meet Our Team
             </h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-              Our experienced professionals are dedicated to delivering exceptional property management services.
-            </p>
+           
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
-              >
-                <div className="w-24 h-24 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Users className="w-12 h-12 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-secondary-900 mb-2">
-                  {member.name}
-                </h3>
-                <div className="text-primary-600 font-medium mb-4">
-                  {member.role}
-                </div>
-                <p className="text-secondary-600 leading-relaxed text-sm">
-                  {member.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-20 bg-gradient-to-r from-secondary-900 to-secondary-800 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Our Mission
-              </h2>
-              <p className="text-xl text-secondary-200 leading-relaxed mb-8">
-                To revolutionize property management in Auckland by providing exceptional service that creates value for landlords, ensures quality homes for tenants, and builds lasting relationships based on trust and excellence.
-              </p>
-              <div className="flex items-center space-x-4">
-                <CheckCircle className="w-6 h-6 text-primary-400" />
-                <span className="text-lg">Committed to your success</span>
+          
+              <div className="space-y-6 text-lg text-secondary-600 leading-relaxed">
+                <p>
+                 Jasdeep Singh (Jas) is a dedicated real estate professional with extensive experience in property management across Auckland. Known for his transparent, no-nonsense, and proactive approach, he helps landlords and tenants navigate the rental market with confidence and clarity.</p>
+                <p>
+              Previously Head of Property Management at one of Auckland's largest real estate agencies, Jasdeep brings a wealth of knowledge and hands-on expertise to every situation. His in-depth understanding of tenancy law, operations, and local market trends allows him to deliver practical, people-first solutions that get results.
+  </p>
+                <p>
+                 With a strong focus on communication, detail, and service, Jasdeep is committed to supporting both landlords and tenants through every step of the property journey.</p>
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="space-y-6"
-            >
-              <div className="flex items-start space-x-4">
-                <Target className="w-8 h-8 text-primary-400 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Our Vision</h3>
-                  <p className="text-secondary-200">
-                    To be Auckland's most trusted property management company, known for innovation, integrity, and exceptional results.
-                  </p>
+            
+              <motion.div
+                
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+            
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
+              >
+                <div className="w-60 h-60 bg-gradient-to-r from-primary-500 to-accent-500 overflow-hidden rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <img src='/meets.png' className="w-60 h-60 rounded-full overflow-hidden text-white" />
                 </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <Award className="w-8 h-8 text-primary-400 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Our Promise</h3>
-                  <p className="text-secondary-200">
-                    We promise to treat your property with the same care and attention we would give our own investments.
-                  </p>
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                  Jasdeep Singh (Jas)
+                </h3>
+                <div className="text-primary-600 font-medium mb-4">
+                 Head of Property Management
                 </div>
-              </div>
-            </motion.div>
+               
+              </motion.div>
           </div>
         </div>
       </section>
+
+    
     </motion.div>
+
   );
 };
 
