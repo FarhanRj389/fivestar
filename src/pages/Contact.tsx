@@ -160,8 +160,8 @@ const Contact: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-secondary-50 p-6 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center mb-4">
-                  <info.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-500 rounded-xl flex items-center justify-center mb-4">
+                  <info.icon className="w-6 h-6 text-black" />
                 </div>
                 <h3 className="text-lg font-semibold text-secondary-900 mb-3">
                   {info.title}
@@ -176,7 +176,7 @@ const Contact: React.FC = () => {
                 {info.action && (
                   <a
                     href={info.action}
-                    className="inline-block mt-3 text-primary-600 hover:text-primary-700 font-medium text-sm"
+                    className="inline-block mt-3 text-yellow-500 hover:text-yellow-600 font-medium text-sm"
                   >
                     Contact Now →
                   </a>
@@ -213,7 +213,7 @@ const Contact: React.FC = () => {
                   onClick={() => setActiveForm('appraisal')}
                   className={`flex-1 py-3 px-6 rounded-xl font-semibold transition-all duration-200 flex items-center justify-center space-x-2 ${
                     activeForm === 'appraisal'
-                      ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-white shadow-lg'
+                      ? 'bg-gradient-to-r from-yellow-500 to-yellow-500 text-black shadow-lg'
                       : 'text-secondary-600 hover:text-secondary-900'
                   }`}
                 >
@@ -224,7 +224,7 @@ const Contact: React.FC = () => {
                   onClick={() => setActiveForm('contact')}
                   className={`flex-1 py-3 px-6 rounded-xl font-semibold transition-all duration-200 flex items-center justify-center space-x-2 ${
                     activeForm === 'contact'
-                      ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-white shadow-lg'
+                      ? 'bg-gradient-to-r from-yellow-500 to-yellow-500 text-black shadow-lg'
                       : 'text-secondary-600 hover:text-secondary-900'
                   }`}
                 >
@@ -261,7 +261,7 @@ const Contact: React.FC = () => {
                           required
                           value={appraisalForm.name}
                           onChange={(e) => setAppraisalForm({...appraisalForm, name: e.target.value})}
-                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                           placeholder="Your full name"
                         />
                       </div>
@@ -274,7 +274,7 @@ const Contact: React.FC = () => {
                           required
                           value={appraisalForm.email}
                           onChange={(e) => setAppraisalForm({...appraisalForm, email: e.target.value})}
-                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -290,7 +290,7 @@ const Contact: React.FC = () => {
                           required
                           value={appraisalForm.phone}
                           onChange={(e) => setAppraisalForm({...appraisalForm, phone: e.target.value})}
-                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                           placeholder="+64 20 123 4567"
                         />
                       </div>
@@ -302,7 +302,7 @@ const Contact: React.FC = () => {
                           required
                           value={appraisalForm.propertyType}
                           onChange={(e) => setAppraisalForm({...appraisalForm, propertyType: e.target.value})}
-                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                         >
                           <option value="">Select property type</option>
                           <option value="apartment">Apartment</option>
@@ -324,7 +324,7 @@ const Contact: React.FC = () => {
                           required
                           value={appraisalForm.address}
                           onChange={(e) => setAppraisalForm({...appraisalForm, address: e.target.value})}
-                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                           placeholder="123 Example Street, Auckland"
                         />
                       </div>
@@ -336,7 +336,7 @@ const Contact: React.FC = () => {
                           required
                           value={appraisalForm.bedrooms}
                           onChange={(e) => setAppraisalForm({...appraisalForm, bedrooms: e.target.value})}
-                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                         >
                           <option value="">Select bedrooms</option>
                           <option value="1">1 Bedroom</option>
@@ -356,14 +356,14 @@ const Contact: React.FC = () => {
                         rows={4}
                         value={appraisalForm.message}
                         onChange={(e) => setAppraisalForm({...appraisalForm, message: e.target.value})}
-                        className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                         placeholder="Tell us about any special features, recent renovations, or specific questions you have..."
                       />
                     </div>
 
                     <button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-primary-500 to-accent-500 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+                      className="w-full bg-gradient-to-r from-yellow-500 to-yellow-500 text-black py-4 px-6 rounded-lg font-semibold text-lg hover:from-yellow-300 hover:to-yellow-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
                     >
                       <Calculator className="w-5 h-5" />
                       <span>Get My Free Appraisal</span>
@@ -400,7 +400,7 @@ const Contact: React.FC = () => {
                           required
                           value={contactForm.name}
                           onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
-                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                           placeholder="Your full name"
                         />
                       </div>
@@ -413,7 +413,7 @@ const Contact: React.FC = () => {
                           required
                           value={contactForm.email}
                           onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
-                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -427,7 +427,7 @@ const Contact: React.FC = () => {
                         required
                         value={contactForm.subject}
                         onChange={(e) => setContactForm({...contactForm, subject: e.target.value})}
-                        className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                       >
                         <option value="">Select a subject</option>
                         <option value="property-management">Property Management Inquiry</option>
@@ -447,14 +447,14 @@ const Contact: React.FC = () => {
                         required
                         value={contactForm.message}
                         onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
-                        className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                         placeholder="Please provide details about your inquiry..."
                       />
                     </div>
 
                     <button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-primary-500 to-accent-500 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+                      className="w-full bg-gradient-to-r from-yellow-500 to-yellow-500 text-black py-4 px-6 rounded-lg font-semibold text-lg hover:from-yellow-300 hover:to-yellow-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
                     >
                       <Send className="w-5 h-5" />
                       <span>Send Message</span>
@@ -478,8 +478,8 @@ const Contact: React.FC = () => {
                 <div className="space-y-4">
                   {whyChooseUs.map((item, index) => (
                     <div key={item.title} className="flex items-start space-x-3">
-                      <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-5 h-5 text-white" />
+                      <div className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-yellow-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-5 h-5 text-black" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-secondary-900 mb-1">
@@ -498,17 +498,17 @@ const Contact: React.FC = () => {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-gradient-to-r from-primary-500 to-accent-500 p-6 rounded-2xl text-white"
+                className="bg-gradient-to-r from-yellow-500 to-yellow-500 p-6 rounded-2xl text-black"
               >
                 <h3 className="text-xl font-bold mb-4">
                   Need Immediate Assistance?
                 </h3>
-                <p className="mb-4 text-primary-100">
+                <p className="mb-4 text-black">
                   Our team is available 24/7 for emergency property issues.
                 </p>
                 <a
                   href="tel:+6420457496"
-                  className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors flex items-center justify-center space-x-2"
+                  className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors flex items-center justify-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Emergency Line</span>
@@ -522,7 +522,7 @@ const Contact: React.FC = () => {
                 className="bg-secondary-100 p-6 rounded-2xl"
               >
                 <div className="flex items-center space-x-2 mb-4">
-                  <CheckCircle className="w-6 h-6 text-primary-600" />
+                  <CheckCircle className="w-6 h-6 text-yellow-500" />
                   <h3 className="text-lg font-bold text-secondary-900">
                     Response Guarantee
                   </h3>
@@ -554,8 +554,8 @@ const Contact: React.FC = () => {
           </motion.div>
 
           <div className="bg-secondary-100 rounded-2xl p-8 text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <MapPin className="w-8 h-8 text-white" />
+            <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <MapPin className="w-8 h-8 text-black" />
             </div>
             <h3 className="text-2xl font-bold text-secondary-900 mb-4">
               Five Star Rentals Office
@@ -569,7 +569,7 @@ const Contact: React.FC = () => {
               href="https://maps.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 bg-primary-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors"
+              className="inline-flex items-center space-x-2 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors"
             >
               <MapPin className="w-5 h-5" />
               <span>Get Directions</span>

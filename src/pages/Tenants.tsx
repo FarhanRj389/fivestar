@@ -25,7 +25,7 @@ import {
   ArrowRight,
  
   UserCheck,
-  Bed,
+
   Check,
  
 } from 'lucide-react';
@@ -307,10 +307,10 @@ const Tenants: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="bg-primary-50 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300"
             >
-              <Search className="w-12 h-12 text-primary-600 mx-auto mb-4" />
+              <Search className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-secondary-900 mb-2">Find Properties</h3>
               <p className="text-secondary-600 text-sm mb-4">Browse available rentals</p>
-              <Link to="/properties" className="text-primary-600 font-medium hover:text-primary-700">
+              <Link to="/properties" className="text-yellow-500 font-medium hover:text-yellow-600">
                 View Properties →
               </Link>
             </motion.div>
@@ -321,10 +321,10 @@ const Tenants: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-accent-50 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300"
             >
-              <Phone className="w-12 h-12 text-accent-600 mx-auto mb-4" />
+              <Phone className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-secondary-900 mb-2">Emergency Line</h3>
               <p className="text-secondary-600 text-sm mb-4">24/7 urgent repairs</p>
-              <a href="tel:+6420457496" className="text-accent-600 font-medium hover:text-accent-700">
+              <a href="tel:+6420457496" className="text-yellow-500 font-medium hover:yellow-600">
                 +64 20 457 4963
               </a>
             </motion.div>
@@ -386,8 +386,8 @@ const Tenants: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-500 rounded-2xl flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold text-secondary-900 mb-4">
                   {service.title}
@@ -428,8 +428,8 @@ const Tenants: React.FC = () => {
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <benefit.icon className="w-8 h-8 text-black" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-secondary-900 mb-3">
@@ -438,7 +438,7 @@ const Tenants: React.FC = () => {
                     <p className="text-secondary-600 leading-relaxed">
                       {benefit.description}
                     </p>
-                    <button  className='bg-gradient-to-r from-primary-500 to-accent-500 py-2 text-white px-10 mt-2 rounded-full'>
+                    <button  className='bg-gradient-to-r from-yellow-500 to-yellow-500 py-2 text-black px-10 mt-2 rounded-full'>
                       <Link to={benefit.link}>
                 {benefit.btn}
                       </Link>
@@ -471,7 +471,7 @@ const Tenants: React.FC = () => {
 
           <div className="relative">
             {/* Process line for desktop */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-accent-500 transform -translate-y-1/2"></div>
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-yellow-500 to-yellow-500 transform -translate-y-1/2"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {applicationSteps.map((step, index) => (
@@ -482,7 +482,7 @@ const Tenants: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="relative text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 text-black font-bold text-xl relative z-10">
                     {step.step}
                   </div>
                   <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -532,7 +532,7 @@ const Tenants: React.FC = () => {
                   onClick={() => setActiveTab(tab.id as any)}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 flex items-center space-x-2 ${
                     activeTab === tab.id
-                      ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-white shadow-lg'
+                      ? 'bg-gradient-to-r from-yellow-500 to-yellow-500 text-black shadow-lg'
                       : 'text-secondary-600 hover:text-secondary-900'
                   }`}
                 >
@@ -583,7 +583,7 @@ const Tenants: React.FC = () => {
                         "Have references ready to respond quickly"
                       ].map((item, index) => (
                         <li key={index} className="flex items-start space-x-3">
-                          <Star className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
+                          <Star className="w-5 h-5 text-yellow-500 mt-0.5 flex-shrink-0" />
                           <span className="text-secondary-600">{item}</span>
                         </li>
                       ))}
@@ -604,7 +604,7 @@ const Tenants: React.FC = () => {
                   {inspectionGuide.map((section, index) => (
                     <div key={section.category}>
                       <h4 className="text-lg font-semibold text-secondary-900 mb-4 flex items-center">
-                        <Camera className="w-5 h-5 text-primary-600 mr-2" />
+                        <Camera className="w-5 h-5 text-yellow-500 mr-2" />
                         {section.category}
                       </h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -723,14 +723,14 @@ const Tenants: React.FC = () => {
               <div className="space-y-4">
                 {tenantRights.slice(0, 4).map((right, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <Shield className="w-6 h-6 text-primary-600 mt-0.5 flex-shrink-0" />
+                    <Shield className="w-6 h-6 text-yellow-500 mt-0.5 flex-shrink-0" />
                     <span className="text-secondary-600">{right}</span>
                   </div>
                 ))}
               </div>
               <Link
                 to="/contact"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-500 to-accent-500 text-white px-6 py-3 rounded-full font-semibold hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mt-6"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-500 to-yellow-500 text-black px-6 py-3 rounded-full font-semibold hover:from-yellow-300 hover:to-yellow-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mt-6"
               >
                 <span>Get Support</span>
                 <ArrowRight className="w-5 h-5" />
@@ -747,7 +747,7 @@ const Tenants: React.FC = () => {
               <div className="space-y-4">
                 {tenantRights.slice(4).map((right, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-yellow-500 mt-0.5 flex-shrink-0" />
                     <span className="text-secondary-600">{right}</span>
                   </div>
                 ))}
@@ -794,9 +794,9 @@ const Tenants: React.FC = () => {
                 >
                   <span className="font-semibold text-secondary-900 pr-4">{faq.question}</span>
                   {openFAQ === index ? (
-                    <Minus className="w-5 h-5 text-primary-600 flex-shrink-0" />
+                    <Minus className="w-5 h-5 text-yellow-600 flex-shrink-0" />
                   ) : (
-                    <Plus className="w-5 h-5 text-primary-600 flex-shrink-0" />
+                    <Plus className="w-5 h-5 text-yellow-600 flex-shrink-0" />
                   )}
                 </button>
                 {openFAQ === index && (
@@ -829,7 +829,7 @@ const Tenants: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+6420457496"
-                className="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center space-x-2"
+                className="bg-gradient-to-r from-yellow-500 to-yellow-500 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-300 hover:to-yellow-500 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
                 <span>Call Us Now</span>

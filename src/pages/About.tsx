@@ -132,23 +132,23 @@ const About: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl p-8 text-white">
+              <div className="bg-gradient-to-br from-yellow-500 to-accent-500 rounded-2xl p-8 text-black">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
                     <div className="text-4xl font-bold mb-2">500+</div>
-                    <div className="text-primary-100">Properties Managed</div>
+                    <div className="text-black">Properties Managed</div>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold mb-2">98%</div>
-                    <div className="text-primary-100">Satisfaction Rate</div>
+                    <div className="text-black">Satisfaction Rate</div>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold mb-2">15+</div>
-                    <div className="text-primary-100">Years Experience</div>
+                    <div className="text-black">Years Experience</div>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold mb-2">24/7</div>
-                    <div className="text-primary-100">Support</div>
+                    <div className="text-black">Support</div>
                   </div>
                 </div>
               </div>
@@ -183,8 +183,8 @@ const About: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <value.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <value.icon className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold text-secondary-900 mb-4">
                   {value.title}
@@ -217,7 +217,7 @@ const About: React.FC = () => {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-500 to-accent-500 rounded-full"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-yellow-500 to-accent-500 rounded-full"></div>
 
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
@@ -232,7 +232,7 @@ const About: React.FC = () => {
                 >
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-white p-6 rounded-2xl shadow-lg">
-                      <div className="text-2xl font-bold text-primary-600 mb-2">
+                      <div className="text-2xl font-bold text-yellow-500 mb-2">
                         {milestone.year}
                       </div>
                       <h3 className="text-xl font-semibold text-secondary-900 mb-3">
@@ -245,7 +245,7 @@ const About: React.FC = () => {
                   </div>
                   
                   {/* Timeline dot */}
-                  <div className="w-4 h-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+                  <div className="w-4 h-4 bg-gradient-to-r from-yellow-500 to-accent-500 rounded-full border-4 border-white shadow-lg z-10"></div>
                   
                   <div className="w-1/2"></div>
                 </motion.div>
@@ -295,13 +295,13 @@ const About: React.FC = () => {
             
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
               >
-                <div className="w-60 h-60 bg-gradient-to-r from-primary-500 to-accent-500 overflow-hidden rounded-full mx-auto mb-6 flex items-center justify-center">
+                <div className="w-60 h-60 bg-gradient-to-r from-yellow-500 to-accent-500 overflow-hidden rounded-full mx-auto mb-6 flex items-center justify-center">
                   <img src='/meets.png' className="w-60 h-60 rounded-full overflow-hidden text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-secondary-900 mb-2">
                   Jasdeep Singh (Jas)
                 </h3>
-                <div className="text-primary-600 font-medium mb-4">
+                <div className="text-yellow-500 font-medium mb-4">
                  Head of Property Management
                 </div>
                

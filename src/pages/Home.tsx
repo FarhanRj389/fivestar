@@ -589,7 +589,7 @@ const Home: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-[#F6D03F] to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-[#F6D03F] hover:to-yellow-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
+                  className="bg-gradient-to-r from-[#F6D03F] to-accent-500 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-[#F6D03F] hover:to-yellow-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
                 >
                   <span>Get Your Free Appraisal</span>
                   <ArrowRight className="w-5 h-5" />

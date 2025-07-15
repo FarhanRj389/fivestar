@@ -53,9 +53,9 @@ const Footer: React.FC = () => {
               className="lg:col-span-1"
             >
               <img 
-                src="/footer_logo.png" 
+                src="/footers_logo.png" 
                 alt="Five Star Rentals" 
-                className="h-[120px] w-[280px] mb-6"
+                className="h-[120px] w-[180px] mb-6"
               />
               <p className="text-secondary-300 mb-6 leading-relaxed">
                 We don't just manage properties, we craft future landlords. Auckland's premier property management company delivering exceptional service since 2020.
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                   <span className="text-sm text-secondary-300">Licensed</span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <Award className="w-5 h-5 text-[#F6D03F ]" />
+                  <Award className="w-5 h-5 text-[#F6D03F]" />
                   <span className="text-sm text-secondary-300">Certified</span>
                 </div>
               </div>

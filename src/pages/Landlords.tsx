@@ -5,7 +5,7 @@ import {
   DollarSign, 
   Shield, 
   Clock, 
-  Users,
+ 
   CheckCircle,
   TrendingUp,
   FileText,
@@ -16,7 +16,7 @@ import {
   ArrowRight,
   Star,
   Award,
-  Target
+
 } from 'lucide-react';
 
 const Landlords: React.FC = () => {
@@ -157,7 +157,7 @@ const Landlords: React.FC = () => {
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Property Management for
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-400">
                   Smart Landlords
                 </span>
               </h1>
@@ -167,7 +167,7 @@ const Landlords: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
+                  className="bg-gradient-to-r from-yellow-400 to-yellow-400 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-300 hover:to-yellow-500 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
                 >
                   <span>Get Free Appraisal</span>
                   <ArrowRight className="w-5 h-5" />
@@ -192,19 +192,19 @@ const Landlords: React.FC = () => {
                 <h3 className="text-2xl font-bold mb-6 text-center">Why Choose Us?</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-6 h-6 text-primary-400" />
+                    <CheckCircle className="w-6 h-6 text-yellow-400" />
                     <span>98% Client Satisfaction Rate</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-6 h-6 text-primary-400" />
+                    <CheckCircle className="w-6 h-6 text-yellow-400" />
                     <span>Average 7 Days to Find Tenants</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-6 h-6 text-primary-400" />
+                    <CheckCircle className="w-6 h-6 text-yellow-400" />
                     <span>24/7 Emergency Support</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-6 h-6 text-primary-400" />
+                    <CheckCircle className="w-6 h-6 text-yellow-400" />
                     <span>Fully Licensed & Insured</span>
                   </div>
                 </div>
@@ -240,8 +240,8 @@ const Landlords: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-secondary-50 p-8 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold text-secondary-900 mb-4">
                   {service.title}
@@ -282,8 +282,8 @@ const Landlords: React.FC = () => {
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <benefit.icon className="w-8 h-8 text-black" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-secondary-900 mb-3">
@@ -319,7 +319,7 @@ const Landlords: React.FC = () => {
 
           <div className="relative">
             {/* Process line for desktop */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-accent-500 transform -translate-y-1/2"></div>
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 transform -translate-y-1/2"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {process.map((step, index) => (
@@ -330,7 +330,7 @@ const Landlords: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="relative text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 text-black font-bold text-xl relative z-10">
                     {step.step}
                   </div>
                   <h3 className="text-lg font-semibold text-secondary-900 mb-3">
@@ -413,7 +413,7 @@ const Landlords: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center space-x-2"
+                className="bg-gradient-to-r from-yellow-500 to-yellow-500 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-300 hover:to-yellow-500 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center space-x-2"
               >
                 <Calculator className="w-5 h-5" />
                 <span>Get Free Appraisal</span>

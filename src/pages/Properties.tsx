@@ -187,7 +187,7 @@ const Properties: React.FC = () => {
                     placeholder="Search by location or property name..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -197,7 +197,7 @@ const Properties: React.FC = () => {
                 <select
                   value={priceRange}
                   onChange={(e) => setPriceRange(e.target.value)}
-                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                 >
                   <option value="all">All Prices</option>
                   <option value="0-500">$0 - $500</option>
@@ -212,7 +212,7 @@ const Properties: React.FC = () => {
                 <select
                   value={propertyType}
                   onChange={(e) => setPropertyType(e.target.value)}
-                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                 >
                   <option value="all">All Types</option>
                   <option value="apartment">Apartment</option>
@@ -227,7 +227,7 @@ const Properties: React.FC = () => {
                 <select
                   value={bedrooms}
                   onChange={(e) => setBedrooms(e.target.value)}
-                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                 >
                   <option value="all">Any Bedrooms</option>
                   <option value="1">1 Bedroom</option>
@@ -271,7 +271,7 @@ const Properties: React.FC = () => {
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-primary-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-medium">
                       {property.available}
                     </span>
                   </div>
@@ -288,11 +288,11 @@ const Properties: React.FC = () => {
                 {/* Property Details */}
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-xl font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors">
+                    <h3 className="text-xl font-semibold text-secondary-900 group-hover:text-yellow-500 transition-colors">
                       {property.title}
                     </h3>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-primary-600">
+                      <div className="text-2xl font-bold text-yellow-500">
                         ${property.price}
                       </div>
                       <div className="text-sm text-secondary-500">per week</div>
@@ -340,7 +340,7 @@ const Properties: React.FC = () => {
                   </div>
 
                   <div className="flex space-x-3">
-                    <button className="flex-1 bg-gradient-to-r from-primary-500 to-accent-500 text-white py-2 px-4 rounded-lg font-medium hover:from-primary-600 hover:to-accent-600 transition-all duration-200 flex items-center justify-center space-x-2">
+                    <button className="flex-1 bg-gradient-to-r from-yellow-500 to-yellow-500 text-black py-2 px-4 rounded-lg font-medium hover:from-yellow-300 hover:to-yellow-500 transition-all duration-200 flex items-center justify-center space-x-2">
                       <Calendar className="w-4 h-4" />
                       <span>Book Viewing</span>
                     </button>
@@ -373,7 +373,7 @@ const Properties: React.FC = () => {
                   setPropertyType('all');
                   setBedrooms('all');
                 }}
-                className="bg-primary-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-600 transition-colors"
+                className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-medium hover:bg-yellow-400 transition-colors"
               >
                 Clear Filters
               </button>
@@ -401,7 +401,7 @@ const Properties: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+6420457496"
-                className="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-primary-600 hover:to-accent-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center space-x-2"
+                className="bg-gradient-to-r from-yellow-500 to-yellow-500 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-300 hover:to-yellow-500 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
                 <span>Call Us Now</span>
