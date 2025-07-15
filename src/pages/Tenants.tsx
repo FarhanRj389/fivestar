@@ -12,8 +12,7 @@ import {
   Shield,
   Home,
   Wrench,
-  DollarSign,
-  Calendar,
+  
   Search,
   Download,
   Plus,
@@ -21,19 +20,36 @@ import {
   Key,
   Camera,
   ClipboardList,
-  BookOpen,
-  HelpCircle,
+
   Star,
   ArrowRight,
-  MapPin,
-  CreditCard,
+ 
   UserCheck,
-  Building
+  Bed,
+ 
 } from 'lucide-react';
 
 const Tenants: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<'application' | 'inspection' | 'maintenance' | 'moving'>('application');
+
+ const benefits = [
+    {
+      title: "Looking for a 2-Bedroom to Rent?",
+      description: "Click here to explore available 2-bedroom properties!",
+      icon: Bed,
+      btn: "2-Bedroom",
+      link: "https://www.renti.co/listing/2-beddy-street-auckland-auckland-2019"
+    },
+    {
+      title: "Need a 3-Bedroom Rental?",
+      description: "Browse our current listings by clicking here.",
+      icon: Bed,
+       btn: "3-Bedroom",
+       link: "https://www.renti.co/listing/3-beddy-street-auckland-auckland-2019"
+    },
+  
+  ];
 
   const tenantServices = [
     {
@@ -383,6 +399,57 @@ const Tenants: React.FC = () => {
           </div>
         </div>
       </section>
+
+ {/* Benefits Section */}
+      <section className="py-20 bg-secondary-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
+              Looking to Rent?
+            </h2>
+            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+              Find Your Next Home with Confidence
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-secondary-900 mb-3">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-secondary-600 leading-relaxed">
+                      {benefit.description}
+                    </p>
+                    <button  className='bg-gradient-to-r from-primary-500 to-accent-500 py-2 text-white px-10 mt-2 rounded-full'>
+                      <Link to={benefit.link}>
+                {benefit.btn}
+                      </Link>
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
 
       {/* Application Process Section */}
       <section className="py-20 bg-white">
