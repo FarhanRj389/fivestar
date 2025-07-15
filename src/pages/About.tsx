@@ -276,7 +276,7 @@ const About: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
           
-              <div className="space-y-6 text-lg text-secondary-600 leading-relaxed">
+              <div className="space-y-6 text-base text-secondary-600 leading-relaxed">
                 <p>
                  Jasdeep Singh (Jas) is a dedicated real estate professional with extensive experience in property management across Auckland. Known for his transparent, no-nonsense, and proactive approach, he helps landlords and tenants navigate the rental market with confidence and clarity.</p>
                 <p>
