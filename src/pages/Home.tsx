@@ -48,9 +48,9 @@ const Home: React.FC = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Properties Managed" },
+    { number: "200+", label: "Properties Managed" },
     { number: "98%", label: "Tenant Satisfaction" },
-    { number: "15+", label: "Years Experience" },
+    { number: "10+", label: "Years Experience" },
     { number: "24/7", label: "Support Available" }
   ];
 
@@ -247,7 +247,7 @@ const Home: React.FC = () => {
                 className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl"
               >
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#F6D03F] mb-1">15+</div>
+                  <div className="text-3xl font-bold text-[#F6D03F] mb-1">10+</div>
                   <div className="text-sm text-secondary-600">Years of Excellence</div>
                 </div>
               </motion.div>
@@ -280,7 +280,7 @@ const Home: React.FC = () => {
               <div className="grid grid-cols-2 gap-6 pt-6">
                 <div className="text-center p-4 bg-white rounded-xl shadow-sm">
                   <Building className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-secondary-900">500+</div>
+                  <div className="text-2xl font-bold text-secondary-900">200+</div>
                   <div className="text-sm text-secondary-600">Properties Managed</div>
                 </div>
                 <div className="text-center p-4 bg-white rounded-xl shadow-sm">
@@ -393,7 +393,7 @@ const Home: React.FC = () => {
                 className="bg-secondary-50 p-8 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-[#F6D03F] to-accent-500 rounded-2xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
+                  <feature.icon className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold text-secondary-900 mb-4">
                   {feature.title}
