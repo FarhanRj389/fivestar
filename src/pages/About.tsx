@@ -54,7 +54,7 @@ const About: React.FC = () => {
     },
     {
       year: "2024",
-      title: "500+ Properties",
+      title: "200+ Properties",
       description: "Expanded to manage over 500 properties with a 98% client satisfaction rate."
     }
   ];
@@ -127,7 +127,7 @@ const About: React.FC = () => {
               <div className="bg-gradient-to-br from-yellow-500 to-accent-500 rounded-2xl p-8 text-black">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-4xl font-bold mb-2">500+</div>
+                    <div className="text-4xl font-bold mb-2">200+</div>
                     <div className="text-black">Properties Managed</div>
                   </div>
                   <div className="text-center">
@@ -135,7 +135,7 @@ const About: React.FC = () => {
                     <div className="text-black">Satisfaction Rate</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-bold mb-2">15+</div>
+                    <div className="text-4xl font-bold mb-2">10+</div>
                     <div className="text-black">Years Experience</div>
                   </div>
                   <div className="text-center">
