@@ -67,11 +67,11 @@ const About: React.FC = () => {
       className="pt-24 md:pt-28" // Increased padding to account for fixed header
     >
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white relative overflow-hidden">
+      <section className="py-40 bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white relative overflow-hidden">
         <div className='absolute z-0 w-ful top-0 right-0 left-0'>
           <video
             className=" w-full h-[300px] lg:h-[630px] object-cover"
-            src="/banner_video_1.mp4"
+            src="/banner_3.mp4"
             autoPlay
             loop
             muted

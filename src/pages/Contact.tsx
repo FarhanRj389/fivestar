@@ -120,7 +120,7 @@ const Contact: React.FC = () => {
       <div className='absolute z-0 w-ful top-0 right-0 left-0'>
         <video
           className=" w-full h-[300px] lg:h-[630px] object-cover"
-          src="/banner_video_1.mp4"
+          src="/banner_1.mp4"
           autoPlay
           loop
           muted

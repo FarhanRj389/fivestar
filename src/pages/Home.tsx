@@ -126,7 +126,7 @@ const Home: React.FC = () => {
       exit={{ opacity: 0 }}
     >
       {/* Hero Section with Fixed Background */}
-      <section className="relative h-[70vh] lg:h-[108vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] lg:h-[100vh] flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <video
           className="absolute z-1 inset-0 w-full h-full object-fill"
@@ -137,8 +137,8 @@ const Home: React.FC = () => {
           playsInline
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary-900/50 via-secondary-800/40 to-secondary-900/60"></div>
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary-900/40 via-secondary-800/30 to-secondary-900/50"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
         
         {/* Hero content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -222,15 +222,15 @@ const Home: React.FC = () => {
               className="relative"
             >
               <div className="relative overflow-hidden  shadow-2xl">
-                
-              <video
+                <img src="/about_section.jpeg" alt="About Section" className='w-full h-[300px] lg:h-[630px] rounded-sm object-cover'/>
+              {/* <video
           className=" w-full h-[300px] lg:h-[630px] object-cover"
           src="/banner_video_3.mp4"
           autoPlay
           loop
           muted
           playsInline
-        />
+        /> */}
                 {/* <img
                   src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Five Star Rentals Team"
@@ -316,7 +316,7 @@ const Home: React.FC = () => {
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <video
                   className="w-full h-[250px] md:h-[350px] lg:h-[500px] object-cover"
-                  src="/banner_video_2.mp4"
+                  src="/banner_3.mp4"
                   autoPlay
                   loop
                   muted

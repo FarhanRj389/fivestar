@@ -265,17 +265,18 @@ const Tenants: React.FC = () => {
       className='pt-24 md:pt-28'>
      
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white relative overflow-hidden">
+      <section className="py-40 bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white relative overflow-hidden">
       <div className='absolute z-0 w-ful top-0 right-0 left-0'>
-        <video
+      <img src="/new_banner_2.jpg" alt="banner" className=" w-full h-[300px] lg:h-[500px] object-cover"/>
+        {/* <video
           className=" w-full h-[300px] lg:h-[630px] object-cover"
           src="/banner_video_1.mp4"
           autoPlay
           loop
           muted
           playsInline
-        />
-        <div className="absolute  z-10 inset-0 bg-black/20">
+        /> */}
+        <div className="absolute  z-10 inset-0 bg-black/30">
         </div>
 
          
