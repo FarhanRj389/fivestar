@@ -130,7 +130,7 @@ const Home: React.FC = () => {
         {/* Video Background */}
         <video
           className="absolute z-1 inset-0 w-full h-full object-fill"
-          src="/banner_4.mp4"
+          src="/video_3.mp4"
           autoPlay
           loop
           muted
