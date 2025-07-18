@@ -70,7 +70,7 @@ const About: React.FC = () => {
       <section className="py-40 bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white relative overflow-hidden">
         <div className='absolute z-0 w-ful top-0 right-0 left-0'>
           <video
-            className=" w-full h-[300px] lg:h-[630px] object-cover"
+            className=" w-full h-[600px] lg:h-[630px] object-cover"
             src="/banner_3.mp4"
             autoPlay
             loop
