@@ -33,9 +33,26 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+  const { request } = event;
+  // Dynamically cache all image requests
+  if (request.destination === 'image' || /\.(png|jpg|jpeg|gif|webp|svg)$/i.test(request.url)) {
+    event.respondWith(
+      caches.open(CACHE_NAME).then(cache =>
+        cache.match(request).then(response => {
+          if (response) return response;
+          return fetch(request).then(networkResponse => {
+            cache.put(request, networkResponse.clone());
+            return networkResponse;
+          });
+        })
+      )
+    );
+    return;
+  }
+  // Default: try cache, then network
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
+    caches.match(request).then(response => {
+      return response || fetch(request);
     })
   );
 }); 

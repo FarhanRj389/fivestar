@@ -306,7 +306,6 @@ const Home: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-primary-50 to-accent-50">
         <div className="w-ful mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            {/* Left: Video/Image */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}

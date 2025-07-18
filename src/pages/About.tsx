@@ -71,14 +71,14 @@ const About: React.FC = () => {
         <div className='absolute z-0 w-ful top-0 right-0 left-0'>
         <img src="/banner_6.jpg" alt="banner" className=" w-full h-[600px] lg:h-[600px] object-fill"/>
           {/* <video
-            className=" w-full h-[600px] lg:h-[630px] object-cover"
+            className=" w-full h-[300px] lg:h-[630px] object-cover"
             src="/video_3.mp4"
             autoPlay
             loop
             muted
             playsInline
           /> */}
-          <div className="absolute  z-10 inset-0 bg-black/30">
+          <div className="absolute  z-10 inset-0 bg-black/20">
           </div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
