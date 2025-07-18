@@ -316,7 +316,7 @@ const Home: React.FC = () => {
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <video
                   className="w-full h-[250px] md:h-[350px] lg:h-[500px] object-cover"
-                  src="/banner_3.mp4"
+                  src="/video_3.mp4"
                   autoPlay
                   loop
                   muted
