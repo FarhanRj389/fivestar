@@ -120,13 +120,13 @@ const Contact: React.FC = () => {
       <div className='absolute z-0 w-ful top-0 right-0 left-0'>
         <video
           className=" w-full h-[500px] lg:h-[630px] object-cover"
-          src="/banner_1.mp4"
+          src="/video_1.mp4"
           autoPlay
           loop
           muted
           playsInline
         />
-        <div className="absolute  z-10 inset-0 bg-black/20">
+        <div className="absolute  z-10 inset-0 bg-black/30">
         </div>
 
          

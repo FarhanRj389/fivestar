@@ -136,8 +136,8 @@ const Landlords: React.FC = () => {
         
       <div className='absolute z-0 w-ful top-0 right-0 left-0'>
         <video
-          className=" w-full h-[1100px] lg:h-[630px] object-cover"
-          src="/banner_1.mp4"
+          className=" w-full h-[1200px] lg:h-[630px] object-cover"
+          src="/video_2.mp4"
           autoPlay
           loop
           muted
