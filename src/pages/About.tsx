@@ -64,7 +64,7 @@ const About: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pt-24 md:pt-28" // Increased padding to account for fixed header
+      className=" md:pt-28" // Increased padding to account for fixed header
     >
       {/* Hero Section */}
       <section className="py-40 bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white relative overflow-hidden">

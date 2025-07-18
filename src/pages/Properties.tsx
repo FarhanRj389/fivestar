@@ -135,7 +135,7 @@ const Properties: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className='pt-24 md:pt-28'>
+      className='md:pt-28'>
       {/* Hero Section */}
       <section className="py-40 bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white relative overflow-hidden">
       <div className='absolute z-0 w-ful top-0 right-0 left-0'>
