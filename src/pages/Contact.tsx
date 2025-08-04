@@ -113,7 +113,8 @@ const Contact: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className='md:pt-28'>
+      className=' relative -top-24'
+      >
       {/* Hero Section */}
       <section className="py-40 bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white relative overflow-hidden">
         
@@ -309,7 +310,7 @@ const Contact: React.FC = () => {
                           <option value="house">House</option>
                           <option value="townhouse">Townhouse</option>
                           <option value="studio">Studio</option>
-                          <option value="other">Other</option>
+                          <option value="other">Other</option>    
                         </select>
                       </div>
                     </div>
@@ -537,7 +538,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -576,7 +577,7 @@ const Contact: React.FC = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
     </motion.div>
   );
 };

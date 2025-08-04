@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-secondary-900 text-white relative overflow-hidden">
+    <footer className="bg-white text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-32 h-32 border border-primary -400 rounded-full"></div>
@@ -53,11 +53,11 @@ const Footer: React.FC = () => {
               className="lg:col-span-1"
             >
               <img 
-                src="/footers_logo.png" 
+                src="/logo.png" 
                 alt="Five Star Rentals" 
                 className="h-[120px] w-[180px] mb-6"
               />
-              <p className="text-secondary-300 mb-6 leading-relaxed">
+              <p className="text-black mb-6 leading-relaxed">
                 We don't just manage properties, we craft future landlords. Auckland's premier property management company delivering exceptional service since 2020.
               </p>
               
@@ -65,23 +65,23 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-4 mb-6">
                 <div className="flex items-center space-x-1">
                   <Shield className="w-5 h-5 text-[#F6D03F]" />
-                  <span className="text-sm text-secondary-300">Licensed</span>
+                  <span className="text-sm text-black">Licensed</span>
                 </div>
                 <div className="flex items-center space-x-1">
                   <Award className="w-5 h-5 text-[#F6D03F]" />
-                  <span className="text-sm text-secondary-300">Certified</span>
+                  <span className="text-sm text-black">Certified</span>
                 </div>
               </div>
 
               {/* Social links */}
               <div className="flex space-x-4">
-                <a href="#" className="text-secondary-400 hover:text-[#F6D03F] transition-colors">
+                <a href="#" className="text-black hover:text-[#F6D03F] transition-colors">
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-secondary-400 hover:text-[#F6D03F] transition-colors">
+                <a href="#" className="text-black hover:text-[#F6D03F] transition-colors">
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-secondary-400 hover:text-[#F6D03F] transition-colors">
+                <a href="#" className="text-black hover:text-[#F6D03F] transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </div>
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
                   <li key={link.name}>
                     <Link
                       to={link.path}
-                      className="text-secondary-300 hover:text-[#F6D03F] transition-colors duration-200 flex items-center group"
+                      className="text-black hover:text-[#F6D03F] transition-colors duration-200 flex items-center group"
                     >
                       <span className="w-2 h-2 bg-[#F6D03F] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                       {link.name}
@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
               <h3 className="text-xl font-semibold mb-6 text-[#F6D03F]">Our Services</h3>
               <ul className="space-y-3">
                 {services.map((service) => (
-                  <li key={service} className="text-secondary-300 flex items-center">
+                  <li key={service} className="text-black flex items-center">
                     <Star className="w-3 h-3 text-accent-400 mr-3 flex-shrink-0" />
                     {service}
                   </li>
@@ -137,31 +137,31 @@ const Footer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-[#F6D03F] mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-secondary-300">Flatbush</p>
-                    <p className="text-secondary-300">Auckland</p>
-                    <p className="text-secondary-300">New Zealand</p>
+                    <p className="text-black">Flatbush</p>
+                    <p className="text-black">Auckland</p>
+                    <p className="text-black">New Zealand</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-[#F6D03F] flex-shrink-0" />
-                  <a href="tel:+6420457496" className="text-secondary-300 hover:text-[#F6D03F] transition-colors">
+                  <a href="tel:+6420457496" className="text-black hover:text-[#F6D03F] transition-colors">
                     +64 20 457 4963
                   </a>
                 </div>
                 
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-[#F6D03F] flex-shrink-0" />
-                  <a href="mailto:admin@fivestarrentals.co.nz" className="text-secondary-300 hover:text-[#F6D03F] transition-colors">
+                  <a href="mailto:admin@fivestarrentals.co.nz" className="text-black hover:text-[#F6D03F] transition-colors">
                     admin@fivestarrentals.co.nz
                   </a>
                 </div>
 
                 <div className="flex items-center space-x-3">
                   <Clock className="w-5 h-5 text-[#F6D03F] flex-shrink-0" />
-                  <div className="text-secondary-300">
+                  <div className="text-black">
                     <p>Mon - Fri: 8:30 AM - 5:30 PM</p>
-                    <p>Sat: 9:00 AM - 2:00 PM</p>
+                    <p>Sat & Sun: Book Your Appointment</p>
                   </div>
                 </div>
               </div>
@@ -170,7 +170,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-secondary-800">
+        <div className="border-t border-secondary-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-secondary-400 text-sm">

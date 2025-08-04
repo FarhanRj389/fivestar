@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion} from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Shield, 
@@ -22,6 +22,8 @@ import {
 
 const Home: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const { scrollY } = useScroll();
+  const videoY = useTransform(scrollY, [0, 1000], [0, -200]);
   
   
   const features = [
@@ -125,21 +127,25 @@ const Home: React.FC = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {/* Hero Section with Fixed Background */}
-      <section className="relative h-[70vh] lg:h-[100vh] flex items-center justify-center overflow-hidden">
-        {/* Video Background */}
+      {/* Fixed Video Background with Parallax */}
+      <motion.div 
+        className="fixed inset-0 w-full h-full z-0"
+        style={{ y: videoY }}
+      >
         <video
-          className="absolute z-1 inset-0 w-full h-full object-fill"
+          className="w-full h-full object-cover"
           src="/video_3.mp4"
           autoPlay
           loop
           muted
           playsInline
         />
-        {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-secondary-900/40 via-secondary-800/30 to-secondary-900/50"></div>
         <div className="absolute inset-0 bg-black/10"></div>
-        
+      </motion.div>
+
+      {/* Hero Section */}
+      <section className="relative h-[70vh] lg:h-[100vh] flex items-center justify-center overflow-hidden z-10">
         {/* Hero content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -179,7 +185,7 @@ const Home: React.FC = () => {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8  transform -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
@@ -188,7 +194,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white pt-32 md:pt-40">
+      <section className="relative py-16 bg-white pt-32 md:pt-40 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -212,7 +218,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 bg-secondary-50">
+      <section className="relative py-20 bg-secondary-50 z-10">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <motion.div
@@ -303,7 +309,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Point of Difference Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-50 to-accent-50">
+      <section className="relative py-20 bg-gradient-to-r from-primary-50 to-accent-50 z-10">
         <div className="w-ful mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <motion.div
@@ -366,7 +372,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="relative py-20 bg-white z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -407,7 +413,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Reasons Section */}
-      <section className="py-20 bg-secondary-50">
+      <section className="relative py-20 bg-secondary-50 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -450,7 +456,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="relative py-20 bg-white z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -543,7 +549,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA Section with Map */}
-      <section className="py-20 bg-gradient-to-r from-secondary-900 to-secondary-800 relative overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-r from-secondary-900 to-secondary-800 z-10">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -565,8 +571,8 @@ const Home: React.FC = () => {
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-6 h-6 text-[#F6D03F]" />
                   <div>
-                    <div className="font-semibold">123 Queen Street</div>
-                    <div className="text-secondary-300">Auckland CBD, 1010</div>
+                    <div className="font-semibold">South Auckland</div>
+                    {/* <div className="text-secondary-300">Auckland CBD, 1010</div> */}
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -628,7 +634,7 @@ const Home: React.FC = () => {
                         className="w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg"
                       >
                         <iframe
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d408658.88749501924!2d174.18828177343752!3d-36.85091599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47e523dac32f%3A0xc317ca2e6cb7d2e6!2sChoice%20Backpackers!5e0!3m2!1sen!2s!4v1751965981712!5m2!1sen!2s"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12747.071910342427!2d174.86308441864674!3d-36.991471164384095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d4dc19e820805%3A0x1680883dfcbb72e8!2sSouth%20Auckland%2C%20Manukau%20City%20Centre%2C%20Auckland%202104%2C%20New%20Zealand!5e0!3m2!1sen!2s!4v1754293950216!5m2!1sen!2s"
                           width="540"
                           height="260"
                           style={{ border: 0 }}

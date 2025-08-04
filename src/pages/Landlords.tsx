@@ -106,23 +106,23 @@ const Landlords: React.FC = () => {
 
   const testimonials = [
     {
-      name: "John Mitchell",
-      location: "Ponsonby",
-      text: "Five Star Rentals has been managing my investment properties for 3 years. Their professionalism and attention to detail is outstanding. I've never had any issues with rent collection or property maintenance.",
+      name: "Tefy Lovee",
+    location: "Auckland, New Zealand",
+      text: "Unprofessional, rude when a person asked if owners can guarantee a time frame to a property they want to rent while getting everything for development. Doesnt says how long a rental so ppl asking as it could be given a really short moving out term simple questions cause probably you move in and after 1 week you have to get out... Dont know how to post photo as proof",
+      rating: 1
+    },
+    {
+      name: "Aman Jador",
+      location: "Auckland, New Zealand",
+      text: "Great to deal with, professional and timely response to all queries. Will highly recommend to all friends/family!",
       rating: 5
     },
     {
-      name: "Sarah Thompson",
-      location: "Remuera",
-      text: "I was hesitant to use a property management company, but Five Star Rentals exceeded my expectations. They found excellent tenants quickly and handle everything professionally.",
+      name: "Five Star Group",
+      location: "Auckland, New Zealand",
+      text: "Awesome team, great to deal with and very transparent. Always responsive and respectful, keep up the great work 👍",
       rating: 5
     },
-    {
-      name: "Michael Chen",
-      location: "Mount Eden",
-      text: "The monthly reports are detailed and helpful. I always know exactly how my properties are performing. The team is responsive and handles maintenance issues promptly.",
-      rating: 5
-    }
   ];
 
   return (
@@ -130,9 +130,10 @@ const Landlords: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className=' md:pt-28'>
+      className=' relative -top-24'
+   >
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white relative overflow-hidden">
+      <section className="py-28 bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white relative overflow-hidden">
         
       <div className='absolute z-0 w-ful top-0 right-0 left-0'>
         <video
@@ -143,7 +144,7 @@ const Landlords: React.FC = () => {
           muted
           playsInline
         />
-        <div className="absolute  z-10 inset-0 bg-black/20">
+        <div className="absolute z-10 inset-0 bg-black/20">
         </div>
 
          
@@ -319,7 +320,7 @@ const Landlords: React.FC = () => {
 
           <div className="relative">
             {/* Process line for desktop */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 transform -translate-y-1/2"></div>
+            {/* <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 transform -translate-y-1/2"></div> */}
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {process.map((step, index) => (

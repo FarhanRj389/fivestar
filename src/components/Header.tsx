@@ -19,7 +19,7 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Top contact bar (desktop only) */}
-      <div className="bg-secondary-900 text-white py-1 px-4 hidden md:block fixed top-0 w-full z-50">
+      <div className="bg-secondary-900 text-white py-1 px-4 hidden md:block relative top-0 w-full z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
 
       {/* Main header - single responsive header */}
       <motion.header
-        className="fixed w-full z-40 bg-white/95 backdrop-blur-md shadow-sm top-0 md:top-[28px]"
+        className="relative w-full z-40 bg-white/20 backdrop-blur-md shadow-sm top-0 "
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
                   className={`relative font-medium transition-colors duration-200 ${
                     location.pathname === item.path
                       ? 'text-yellow-500'
-                      : 'text-black hover:text-yellow-500 '
+                      : 'text-white hover:text-yellow-500 '
                   }`}
                 >
                   {item.name}
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white/95 backdrop-blur-md border-t border-secondary-200"
+              className="md:hidden bg-white/20 backdrop-blur-md border-t border-secondary-200"
             >
               <div className="px-4 py-4 space-y-4">
                 {navItems.map((item) => (
