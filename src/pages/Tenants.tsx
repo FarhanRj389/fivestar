@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
+import { 
   Users,
   FileText,
   CheckCircle,
@@ -12,7 +12,7 @@ import {
   Shield,
   Home,
   Wrench,
-
+  
   Search,
   Download,
   Plus,
@@ -23,18 +23,18 @@ import {
 
   Star,
   ArrowRight,
-
+ 
   UserCheck,
 
   Check,
-
+ 
 } from 'lucide-react';
 
 const Tenants: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<'application' | 'inspection' | 'maintenance' | 'moving'>('application');
 
-  const benefits = [
+ const benefits = [
     {
       title: "Looking for a 2-Bedroom to Rent?",
       description: "Click here to explore available 2-bedroom properties!",
@@ -46,10 +46,10 @@ const Tenants: React.FC = () => {
       title: "Need a 3-Bedroom Rental?",
       description: "Browse our current listings by clicking here.",
       icon: Check,
-      btn: "3-Bedroom",
-      link: "https://www.renti.co/listing/3-beddy-street-auckland-auckland-2019"
+       btn: "3-Bedroom",
+       link: "https://www.renti.co/listing/3-beddy-street-auckland-auckland-2019"
     },
-
+  
   ];
 
   const tenantServices = [
@@ -264,12 +264,12 @@ const Tenants: React.FC = () => {
       exit={{ opacity: 0 }}
            className=' relative -top-24'
       >
-
+     
       {/* Hero Section */}
       <section className="py-40 bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white relative overflow-hidden">
-        <div className='absolute z-0 w-ful top-0 right-0 left-0'>
+      <div className='absolute z-0 w-ful top-0 right-0 left-0'>
           <img src="/banner_5.jpg" alt="banner" className=" w-full h-[600px] lg:h-[500px] object-cover" />
-          {/* <video
+        {/* <video
           className=" w-full h-[300px] lg:h-[630px] object-cover"
           src="/banner_video_1.mp4"
           autoPlay
@@ -277,10 +277,10 @@ const Tenants: React.FC = () => {
           muted
           playsInline
         /> */}
-          <div className="absolute  z-10 inset-0 bg-black/30">
-          </div>
+        <div className="absolute  z-10 inset-0 bg-black/30">
+        </div>
 
-
+         
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -403,7 +403,7 @@ const Tenants: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+ {/* Benefits Section */}
       <section className="py-20 bg-secondary-50  items-center">
         <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 ">
           <motion.div
@@ -413,12 +413,12 @@ const Tenants: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
-              Register now for early access to new listings
+            Register now for early access to new listings
             </h2>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-              Register your details to receive early notifications and get exclusive access to properties before they hit the market
+            Register your details to receive early notifications and get exclusive access to properties before they hit the market
             </p>
-
+            
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
@@ -443,25 +443,25 @@ const Tenants: React.FC = () => {
                     </p>
                     <button className='bg-gradient-to-r from-yellow-500 to-yellow-500 py-2 text-black px-10 mt-2 rounded-full'>
                       <Link to={benefit.link}>
-                        {benefit.btn}
+                {benefit.btn}
                       </Link>
                     </button>
                   </div>
                 </div>
               </motion.div>
-
+              
             ))}
           </div>
         </div>
         <div className="flex justify-center mt-8">
           <button className='bg-gradient-to-r  from-yellow-500 to-yellow-500 py-2 text-black px-6 mt-2 rounded-full'>
             <Link to="/contact">
-              Let Us Know You're Interested
-            </Link>
-          </button>
+                      Let Us Know You're Interested
+                      </Link>
+              </button>
         </div>
       </section>
-
+      
 
       {/* Application Process Section */}
       <section className="py-20 bg-white">
@@ -544,7 +544,7 @@ const Tenants: React.FC = () => {
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 flex items-center space-x-2 ${activeTab === tab.id
                       ? 'bg-gradient-to-r from-yellow-500 to-yellow-500 text-black shadow-lg'
                       : 'text-secondary-600 hover:text-secondary-900'
-                    }`}
+                  }`}
                 >
                   <tab.icon className="w-5 h-5" />
                   <span>{tab.label}</span>
@@ -835,7 +835,7 @@ const Tenants: React.FC = () => {
             <p className="text-xl text-secondary-200 mb-8 max-w-3xl mx-auto">
               Our experienced team is here to help you with any questions about renting, applications, or tenancy issues.
             </p>
-
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+6420457496"
@@ -844,7 +844,7 @@ const Tenants: React.FC = () => {
                 <Phone className="w-5 h-5" />
                 <span>Call Us Now</span>
               </a>
-
+              
               <Link
                 to="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-secondary-900 transition-all duration-200 flex items-center space-x-2"
