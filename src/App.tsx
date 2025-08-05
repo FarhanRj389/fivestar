@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import {  AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 import { BeatLoader } from 'react-spinners';
 import Header from './components/Header';
@@ -15,16 +15,14 @@ import Contact from './pages/Contact';
 import BackgroundAnimation from './components/BackgroundAnimation';
 
 function App() {
-   const [loading, setLoading] = useState(true);
-  const [isClient, setIsClient] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setIsClient(true); // Only true on client
-    const timer = setTimeout(() => setLoading(false), 1200); // 1.2s minimum loader
+    const timer = setTimeout(() => setLoading(false), 1200);
     return () => clearTimeout(timer);
   }, []);
 
-  if (!isClient || loading) {
+  if (loading) {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-white z-[9999]">
         <BeatLoader color="#F6D03F" size={20} />
