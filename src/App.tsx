@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppChat from './components/WhatsAppChat';
@@ -14,24 +15,26 @@ import BackgroundAnimation from './components/BackgroundAnimation';
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-white relative overflow-hidden">
-        <BackgroundAnimation />
-        <Header />
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/landlords" element={<Landlords />} />
-            <Route path="/tenants" element={<Tenants />} />
-            <Route path="/properties" element={<Properties />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </AnimatePresence>
-        <Footer />
-        <WhatsAppChat />
-      </div>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-white relative overflow-hidden">
+          <BackgroundAnimation />
+          <Header />
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/landlords" element={<Landlords />} />
+              <Route path="/tenants" element={<Tenants />} />
+              <Route path="/properties" element={<Properties />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </AnimatePresence>
+          <Footer />
+          <WhatsAppChat />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 

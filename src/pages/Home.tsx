@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { 
   Shield, 
   TrendingUp, 
@@ -122,11 +123,18 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <>
+      <SEO 
+        title="Premium Property Management in Auckland"
+        description="Five Star Rentals - We don't just manage properties, we craft future landlords. Premium property management services in Auckland for landlords and tenants. 200+ properties managed, 98% satisfaction rate."
+        keywords="property management Auckland, rental property management, landlord services Auckland, tenant services, property management company, Auckland property management, rental management, property investment Auckland"
+        image="/logo.png"
+      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
       {/* Fixed Video Background with Parallax */}
       <motion.div 
         className="fixed inset-0 w-full h-full z-0"
@@ -684,6 +692,7 @@ const Home: React.FC = () => {
         </div>
       </section>
     </motion.div>
+    </>
   );
 };
 
