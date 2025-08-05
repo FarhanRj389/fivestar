@@ -130,11 +130,11 @@ const Home: React.FC = () => {
         keywords="property management Auckland, rental property management, landlord services Auckland, tenant services, property management company, Auckland property management, rental management, property investment Auckland"
         image="/logo.png"
       />
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       {/* Fixed Video Background with Parallax */}
       <motion.div 
         className="fixed inset-0 w-full h-full z-0"
@@ -151,7 +151,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-secondary-900/40 via-secondary-800/30 to-secondary-900/50"></div>
         <div className="absolute inset-0 bg-black/10"></div>
       </motion.div>
-
+        
       {/* Hero Section */}
       <section className="relative h-[70vh] lg:h-[100vh] flex items-center justify-center overflow-hidden z-10">
         {/* Hero content */}

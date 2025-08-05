@@ -15,14 +15,16 @@ import Contact from './pages/Contact';
 import BackgroundAnimation from './components/BackgroundAnimation';
 
 function App() {
-  const [loading, setLoading] = useState(true);
+   const [loading, setLoading] = useState(true);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 5000);
+    setIsClient(true); // Only true on client
+    const timer = setTimeout(() => setLoading(false), 1200); // 1.2s minimum loader
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
+  if (!isClient || loading) {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-white z-[9999]">
         <BeatLoader color="#F6D03F" size={20} />
