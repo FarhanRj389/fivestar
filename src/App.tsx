@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as  Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import {  AnimatePresence } from 'framer-motion';
 import { BeatLoader } from 'react-spinners';
 import Header from './components/Header';
