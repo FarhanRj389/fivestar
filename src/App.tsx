@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     setIsClient(true);
     setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 1000); // 1s loader on every route change
+    const timer = setTimeout(() => setLoading(false), 5000); // 1s loader on every route change
     return () => clearTimeout(timer);
   }, [location]);
 
