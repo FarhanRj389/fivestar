@@ -108,7 +108,7 @@ const Landlords: React.FC = () => {
     {
       name: "Tefy Lovee",
     location: "Auckland, New Zealand",
-      text: "Unprofessional, rude when a person asked if owners can guarantee a time frame to a property they want to rent while getting everything for development. Doesnt says how long a rental so ppl asking as it could be given a really short moving out term simple questions cause probably you move in and after 1 week you have to get out... Dont know how to post photo as proof",
+      text: "Your trusted partner in premium property leasing — where quality homes meet professional service",
       rating: 1
     },
     {
