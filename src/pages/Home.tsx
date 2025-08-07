@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState,  } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -317,7 +317,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Point of Difference Section */}
-      <section className="relative py-20 bg-gradient-to-r from-primary-50 to-accent-50 z-10">
+      <section className="relative py-20 bg-gradient-to-r from-[#F6D03F] to-accent-500 z-10">
         <div className="w-ful mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <motion.div
