@@ -271,13 +271,13 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-6 bg"
+              className="space-y-6 bg text-center md:text-left"
             >
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold  text-white mb-6">
                   About Five Star Rentals
                 </h2>
-                <div className="w-20 h-1 bg-gradient-to-r from-[#F6D03F] to-accent-500 mb-6"></div>
+                <div className="w-20 h-1 bg-gradient-to-r  mx-auto md:mx-0 from-[#F6D03F] to-accent-500 mb-6"></div>
               </div>
               
               <div className="space-y-4 text-base text-white leading-relaxed">
@@ -317,8 +317,8 @@ const Home: React.FC = () => {
       </section>
 
       {/* Point of Difference Section */}
-      <section className="relative py-20 bg-gradient-to-r from-[#F6D03F] to-accent-500 z-10">
-        <div className="w-ful mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gradient-to-r  from-[#F6D03F] to-accent-500 z-10">
+        <div className="w-ful mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -344,10 +344,10 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
+              className="space-y-6 mx-auto text-center md:text-left"
             >
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold  text-secondary-900 mb-6">
                   A Point of Difference That Sets Us Apart
                 </h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-[#F6D03F] to-accent-500 mb-6"></div>
