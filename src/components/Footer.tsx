@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
               <img 
                 src="/logo.png" 
                 alt="Five Star Rentals" 
-                className="h-[120px] w-[180px] mb-6"
+                className="h-[90px] w-[160px] mb-6"
               />
               <p className="text-black mb-6 leading-relaxed">
                 We don't just manage properties, we craft future landlords. Auckland's premier property management company delivering exceptional service since 2020.
@@ -172,11 +172,14 @@ const Footer: React.FC = () => {
         {/* Bottom bar */}
         <div className="border-t border-secondary-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className=" justify-between items-center text-center ">
               <p className="text-secondary-400 text-sm">
-                © 2024 Five Star Rentals. All rights reserved DigitronCX
+                © 2024 Five Star Rentals. All rights reserved 
+                <a href='https://digitroncx.com/' className='text-yellow-400 hover:text-cyan-500'>&nbsp;
+                DigitronCX
+                </a>
               </p>
-              <div className="flex space-x-6 text-sm">
+              {/* <div className="flex space-x-6 text-sm">
                 <a href="#" className="text-secondary-400 hover:text-[#F6D03F] transition-colors">
                   Privacy Policy
                 </a>
@@ -186,7 +189,7 @@ const Footer: React.FC = () => {
                 <a href="#" className="text-secondary-400 hover:text-[#F6D03F] transition-colors">
                   Cookie Policy
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

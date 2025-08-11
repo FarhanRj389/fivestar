@@ -109,7 +109,7 @@ const Landlords: React.FC = () => {
       name: "Tefy Lovee",
     location: "Auckland, New Zealand",
       text: "Your trusted partner in premium property leasing — where quality homes meet professional service",
-      rating: 1
+      rating: 5
     },
     {
       name: "Aman Jador",
