@@ -24,7 +24,7 @@ import {
 const Home: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const { scrollY } = useScroll();
-  const videoY = useTransform(scrollY, [0, 1000], [0, -200]);
+  const videoY = useTransform(scrollY, [0, 1000], [0, 0]);
   
   
   const features = [
@@ -125,13 +125,13 @@ const Home: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Premium Property Management in Auckland"
+        title="FiverStarRental | Premium Property Management in Auckland"
         description="Five Star Rentals - We don't just manage properties, we craft future landlords. Premium property management services in Auckland for landlords and tenants. 200+ properties managed, 98% satisfaction rate."
         keywords="property management Auckland, rental property management, landlord services Auckland, tenant services, property management company, Auckland property management, rental management, property investment Auckland"
         image="/logo.png"
       />
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
@@ -202,7 +202,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="relative py-16 bg-white pt-32 md:pt-40 z-10">
+      <section className="relative py-16 bg-white/30 pt-32 md:pt-40 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -216,7 +216,7 @@ const Home: React.FC = () => {
         <div className="text-4xl md:text-5xl font-bold text-[#F6D03F] mb-2">
                   {stat.number}
                 </div>
-                <div className="text-secondary-600 font-medium">
+                <div className="text-white font-medium">
                   {stat.label}
                 </div>
               </motion.div>
@@ -226,7 +226,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="relative py-20 bg-secondary-50 z-10">
+      <section className="relative py-20 bg-white/30 z-10">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <motion.div
@@ -271,16 +271,16 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
+              className="space-y-6 bg"
             >
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold  text-white mb-6">
                   About Five Star Rentals
                 </h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-[#F6D03F] to-accent-500 mb-6"></div>
               </div>
               
-              <div className="space-y-4 text-base text-secondary-600 leading-relaxed">
+              <div className="space-y-4 text-base text-white leading-relaxed">
                 <p>
                   Founded in 2020, Five Star Rentals was created to deliver a no-nonsense, proactive approach to property management in Auckland one that truly supports both landlords and their tenants.
  </p>
@@ -380,7 +380,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="relative py-20 bg-white z-10">
+      <section className="relative py-20 bg-white/30 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -388,10 +388,10 @@ const Home: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Five Star Rentals?
             </h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               We combine years of experience with innovative technology to deliver exceptional property management services.
             </p>
           </motion.div>
@@ -464,7 +464,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative py-20 bg-white z-10">
+      <section className="relative py-20  bg-secondary-50 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
