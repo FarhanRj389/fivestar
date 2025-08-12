@@ -24,7 +24,7 @@ import {
 const Home: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const { scrollY } = useScroll();
-  const videoY = useTransform(scrollY, [0, 1000], [0, 0]);
+  const videoY = useTransform(scrollY, [0, 1000], [0, 1]);
   
   
   const features = [
