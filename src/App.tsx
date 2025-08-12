@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { BeatLoader } from 'react-spinners';
+import { AuthProvider } from './contexts/AuthContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppChat from './components/WhatsAppChat';
@@ -11,6 +12,8 @@ import Landlords from './pages/Landlords';
 import Tenants from './pages/Tenants';
 import Properties from './pages/Properties';
 import Contact from './pages/Contact';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
 import BackgroundAnimation from './components/BackgroundAnimation';
 
 // Add your image and video URLs here
@@ -79,22 +82,26 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white relative overflow-hidden">
-      <BackgroundAnimation />
-      <Header />
-      <AnimatePresence mode="wait">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/landlords" element={<Landlords />} />
-          <Route path="/tenants" element={<Tenants />} />
-          <Route path="/properties" element={<Properties />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </AnimatePresence>
-      <Footer />
-      <WhatsAppChat />
-    </div>
+    <AuthProvider>
+      <div className="min-h-screen bg-white relative overflow-hidden">
+        <BackgroundAnimation />
+        <Header />
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/landlords" element={<Landlords />} />
+            <Route path="/tenants" element={<Tenants />} />
+            <Route path="/properties" element={<Properties />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </AnimatePresence>
+        <Footer />
+        <WhatsAppChat />
+      </div>
+    </AuthProvider>
   );
 }
 

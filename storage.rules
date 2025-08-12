@@ -1,0 +1,19 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow authenticated users to upload images
+    match /properties/{allPaths=**} {
+      allow read: if true; // Anyone can view property images
+      allow write: if request.auth != null 
+        && request.resource.size < 10 * 1024 * 1024 // Max 10MB
+        && request.resource.contentType.matches('image/.*'); // Only images
+    }
+    
+    // Allow authenticated users to upload other files
+    match /uploads/{allPaths=**} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null 
+        && request.resource.size < 50 * 1024 * 1024; // Max 50MB
+    }
+  }
+}
