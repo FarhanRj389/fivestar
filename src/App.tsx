@@ -38,48 +38,48 @@ const videoUrls = [
   '/video_3.mp4',
 ];
 
-function preloadMedia(urls: string[]) {
-  return Promise.all(
-    urls.map(
-      url =>
-        new Promise<void>(resolve => {
-          const ext = url.split('.').pop();
-          if (ext === 'mp4' || ext === 'webm') {
-            const video = document.createElement('video');
-            video.src = url;
-            video.onloadeddata = () => resolve();
-            video.onerror = () => resolve();
-          } else {
-            const img = new window.Image();
-            img.src = url;
-            img.onload = () => resolve();
-            img.onerror = () => resolve();
-          }
-        })
-    )
-  );
-}
+// function preloadMedia(urls: string[]) {
+//   return Promise.all(
+//     urls.map(
+//       url =>
+//         new Promise<void>(resolve => {
+//           const ext = url.split('.').pop();
+//           if (ext === 'mp4' || ext === 'webm') {
+//             const video = document.createElement('video');
+//             video.src = url;
+//             video.onloadeddata = () => resolve();
+//             video.onerror = () => resolve();
+//           } else {
+//             const img = new window.Image();
+//             img.src = url;
+//             img.onload = () => resolve();
+//             img.onerror = () => resolve();
+//           }
+//         })
+//     )
+//   );
+// }
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [isClient, setIsClient] = useState(false);
   const location = useLocation();
 
-  useEffect(() => {
-    setIsClient(true);
-    setLoading(true);
-    preloadMedia([...imageUrls, ...videoUrls]).then(() => {
-      setLoading(false);
-    });
-  }, [location]);
+  // useEffect(() => {
+  //   setIsClient(true);
+  //   setLoading(true);
+  //   preloadMedia([...imageUrls, ...videoUrls]).then(() => {
+  //     setLoading(false);
+  //   });
+  // }, [location]);
 
-  if (!isClient || loading) {
-    return (
-      <div className="fixed inset-0 flex items-center justify-center bg-white z-[9999]">
-        <BeatLoader color="#F6D03F" size={20} />
-      </div>
-    );
-  }
+  // if (!isClient || loading) {
+  //   return (
+  //     <div className="fixed inset-0 flex items-center justify-center bg-white z-[9999]">
+  //       <BeatLoader color="#F6D03F" size={20} />
+  //     </div>
+  //   );
+  // }
 
   return (
     <AuthProvider>
