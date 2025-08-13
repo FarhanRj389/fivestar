@@ -279,7 +279,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="relative py-20 bg-white/30 z-10">
+      <section className="relative py-20 bg-transparent z-10">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <motion.div
@@ -433,7 +433,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="relative py-20 bg-white/30 z-10">
+      <section className="relative py-20 bg-transparent z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
