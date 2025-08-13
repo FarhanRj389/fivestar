@@ -1,6 +1,7 @@
 // Service Worker for Cache Management
 const CACHE_NAME = 'fivestar-rentals-v1';
 const STATIC_CACHE_NAME = 'fivestar-static-v1';
+const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 1 week in milliseconds
 
 // Resources to cache
 const CACHE_URLS = [
@@ -12,6 +13,32 @@ const CACHE_URLS = [
   '/about_section.jpeg',
   '/manifest.json'
 ];
+
+// Helper function to check if cache is expired
+function isCacheExpired(timestamp) {
+  const now = Date.now();
+  return (now - timestamp) > CACHE_DURATION;
+}
+
+// Helper function to store cache timestamp
+function setCacheTimestamp() {
+  return self.caches.open('cache-metadata').then(cache => {
+    const timestamp = Date.now();
+    return cache.put('timestamp', new Response(timestamp.toString()));
+  });
+}
+
+// Helper function to get cache timestamp
+function getCacheTimestamp() {
+  return self.caches.open('cache-metadata').then(cache => {
+    return cache.match('timestamp').then(response => {
+      if (response) {
+        return response.text().then(text => parseInt(text));
+      }
+      return null;
+    });
+  });
+}
 
 // Install event - cache resources
 self.addEventListener('install', (event) => {
