@@ -1,4 +1,4 @@
-import React, { useState,  } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -51,11 +51,52 @@ const Home: React.FC = () => {
   ];
 
   const stats = [
-    { number: "200+", label: "Properties Managed" },
-    { number: "98%", label: "Tenant Satisfaction" },
-    { number: "10+", label: "Years Experience" },
-    { number: "24/7", label: "Support Available" }
+    { number: "200+", label: "Properties Managed", value: 200, suffix: "+" },
+    { number: "98%", label: "Tenant Satisfaction", value: 98, suffix: "%" },
+    { number: "10+", label: "Years Experience", value: 10, suffix: "+" },
+    { number: "24/7", label: "Support Available", value: 24, suffix: "/7" }
   ];
+
+  // Custom hook for counter animation
+  const useCountUp = (end: number, duration: number = 2000, start: number = 0) => {
+    const [count, setCount] = useState(start);
+    const [isVisible, setIsVisible] = useState(false);
+    const countRef = useRef(start);
+    const frameRef = useRef<number>();
+
+    useEffect(() => {
+      if (!isVisible) return;
+
+      const startTime = Date.now();
+      const startValue = countRef.current;
+
+      const updateCount = () => {
+        const now = Date.now();
+        const progress = Math.min((now - startTime) / duration, 1);
+        
+        // Easing function for smooth animation
+        const easeOutQuart = 1 - Math.pow(1 - progress, 3);
+        const currentCount = Math.floor(startValue + (end - startValue) * easeOutQuart);
+        
+        setCount(currentCount);
+        countRef.current = currentCount;
+
+        if (progress < 1) {
+          frameRef.current = requestAnimationFrame(updateCount);
+        }
+      };
+
+      frameRef.current = requestAnimationFrame(updateCount);
+
+      return () => {
+        if (frameRef.current) {
+          cancelAnimationFrame(frameRef.current);
+        }
+      };
+    }, [end, duration, isVisible]);
+
+    return { count, setIsVisible };
+  };
 
   const reasons = [
     {
@@ -202,25 +243,37 @@ const Home: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="relative py-16 bg-white/30 pt-32 md:pt-40 z-10">
+      <section className="relative py-16 bg-transparent pt-32 md:pt-40 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-        <div className="text-4xl md:text-5xl font-bold text-[#F6D03F] mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-white font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
+            {stats.map((stat, index) => {
+              const StatCounter = () => {
+                const { count, setIsVisible } = useCountUp(stat.value, 2000 + index * 200);
+                
+                return (
+                  <motion.div
+                    key={stat.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ 
+                      opacity: 1, 
+                      y: 0,
+                      transition: { duration: 0.6, delay: index * 0.1 }
+                    }}
+                    onViewportEnter={() => setIsVisible(true)}
+                    className="text-center bg-white py-6 rounded-md"
+                  >
+                    <div className="text-4xl md:text-5xl p-3 font-bold text-yellow-400">
+                      {count}{stat.suffix}
+                    </div>
+                    <div className="text-black font-semibold">
+                      {stat.label}
+                    </div>
+                  </motion.div>
+                );
+              };
+              
+              return <StatCounter key={stat.label} />;
+            })}
           </div>
         </div>
       </section>
