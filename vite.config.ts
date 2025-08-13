@@ -16,10 +16,6 @@ export default defineConfig({
     // Chunk splitting for better caching
     rollupOptions: {
       output: {
-        // Add hash to filenames for cache busting
-        entryFileNames: 'assets/[name].[hash].js',
-        chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash].[ext]',
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
@@ -31,8 +27,6 @@ export default defineConfig({
     // Asset optimization
     assetsInlineLimit: 4096,
     chunkSizeWarningLimit: 1000,
-    // Source maps for debugging (optional)
-    sourcemap: false,
   },
   // Optimize dependencies
   optimizeDeps: {
